@@ -35,6 +35,7 @@ export EDITOR="vim"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cat="bat"
+alias create-laravel-app="composer create-project laravel/laravel"
 
 # Set VIM as editor
 export EDITOR="vim"
