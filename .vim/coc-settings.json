@@ -7,6 +7,7 @@
   "suggest.noselect": false,
   "cSpell.userWords": ["vala"],
   "python.jediEnabled": false,
+  "intelephense.licenceKey": "/data/data/com.termux/files/home/.intelephense.txt",
   "languageserver": {
     "vala": {
       "command": "vala-language-server",

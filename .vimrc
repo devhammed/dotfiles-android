@@ -17,6 +17,9 @@ call plug#end()
 
 " == begin:coc.nvim settings ==
 
+" Set required extensions
+let g:coc_global_extensions = ['coc-json', 'coc-git',  'coc-css', 'coc-html', 'coc-emmet', 'coc-flutter', 'coc-go', 'coc-phpls', 'coc-prettier', 'coc-python', 'coc-rls', 'coc-spell-checker', 'coc-tsserver']
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
