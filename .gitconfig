@@ -12,5 +12,5 @@
 [pull]
 	rebase = false
 [core]
-	sshCommand = "ssh -i ~/.ssh/id_personal_termux"
+	sshCommand = "ssh -i ~/.ssh/id_personal"
 	excludesFile = ~/.gitignore
