@@ -6,9 +6,9 @@
 [init]
 	defaultBranch = main
 [commit]
-	gpgsign = false
+	gpgsign = true
 [tag]
-	forceSignAnnotated = false
+	forceSignAnnotated = true
 [pull]
 	rebase = false
 [core]

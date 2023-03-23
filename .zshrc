@@ -44,7 +44,7 @@ export EDITOR="vim"
 if [ -z "$SSH_AUTH_SOCK" ] ; then
 	eval "$(ssh-agent -s)" > /dev/null 2>&1
 
-	ssh-add ~/.ssh/id_personal_termux > /dev/null 2>&1
+	ssh-add ~/.ssh/id_personal > /dev/null 2>&1
 fi
 
 # Load Zoxide
