@@ -47,6 +47,42 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 	ssh-add ~/.ssh/id_personal > /dev/null 2>&1
 fi
 
+# Setup Deno Docker
+deno () {
+  docker run \
+    --interactive \
+    --tty \
+    --rm \
+    --volume $PWD:/app \
+    --volume $HOME/.deno:/deno-dir \
+    --workdir /app \
+    denoland/deno:latest \
+    "$@"
+}
+
+# Setup Flutter Docker
+flutter () {
+	docker run \
+	--interactive \
+	--rm \
+	--tty \
+	--volume $PWD:/app \
+	--workdir /app \
+	instrumentisto/flutter:latest \
+	flutter "$@"
+}
+
+dart () {
+	docker run \
+	--interactive \
+	--rm \
+	--tty \
+	--volume $PWD:/app \
+	--workdir /app \
+	instrumentisto/flutter:latest \
+	dart "$@"
+}
+
 # Load Zoxide
 eval "$(zoxide init zsh)"
 
