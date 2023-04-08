@@ -60,29 +60,6 @@ deno () {
     "$@"
 }
 
-# Setup Flutter Docker
-flutter () {
-	docker run \
-	--interactive \
-	--rm \
-	--tty \
-	--volume $PWD:/app \
-	--workdir /app \
-	instrumentisto/flutter:latest \
-	flutter "$@"
-}
-
-dart () {
-	docker run \
-	--interactive \
-	--rm \
-	--tty \
-	--volume $PWD:/app \
-	--workdir /app \
-	instrumentisto/flutter:latest \
-	dart "$@"
-}
-
 # Load Zoxide
 eval "$(zoxide init zsh)"
 
