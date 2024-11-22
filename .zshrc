@@ -17,6 +17,7 @@ ZSH_THEME=""
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+  artisan
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
@@ -27,6 +28,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export EDITOR="vim"
+export PATH="$HOME/go/bin:$PATH"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -37,31 +39,21 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cat="bat"
 alias create-laravel-app="composer create-project laravel/laravel"
 
-# Set VIM as editor
-export EDITOR="vim"
-
 # Setup SSH-Agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
 	eval "$(ssh-agent -s)" > /dev/null 2>&1
 
 	ssh-add ~/.ssh/id_personal > /dev/null 2>&1
-fi
 
-# Setup Deno Docker
-deno () {
-  docker run \
-    --interactive \
-    --tty \
-    --rm \
-    --volume $PWD:/app \
-    --volume $HOME/.deno:/deno-dir \
-    --workdir /app \
-    denoland/deno:latest \
-    "$@"
-}
+  ssh-add ~/.ssh/id_decagon > /dev/null 2>&1
+
+  ssh-add ~/.ssh/id_vertex > /dev/null 2>&1
+fi
 
 # Load Zoxide
 eval "$(zoxide init zsh)"
 
 # Load Starship
 eval "$(starship init zsh)"
+export PATH="/data/data/com.termux/files/home/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/data/data/com.termux/files/home/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
