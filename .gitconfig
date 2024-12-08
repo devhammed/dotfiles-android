@@ -5,13 +5,24 @@
 	signingkey = 990729A301F44E5C
 [init]
 	defaultBranch = main
+	templateDir = ~/.git-template
 [commit]
-	gpgsign = true
+	gpgSign = true
 [tag]
-	forceSignAnnotated = true
 	gpgSign = true
 [pull]
 	rebase = false
 [core]
 	sshCommand = "ssh -i ~/.ssh/id_personal"
 	excludesFile = ~/.gitignore
+  autocrlf = input
+[merge]
+  renameLimit = 100000
+[includeIf "gitdir:~/projects/decagon/"]
+	path = ~/.gitconfig-decagon
+[includeIf "gitdir:~/projects/vertex/"]
+  path = ~/.gitconfig-vertex
+[includeIf "gitdir:~/projects/merck/"]
+  path = ~/.gitconfig-merck
+[includeIf "gitdir:~/.composer/cex-wpvip-repo-registry/"]
+  path = ~/.gitconfig-merck
