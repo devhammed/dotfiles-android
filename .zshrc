@@ -55,5 +55,3 @@ eval "$(zoxide init zsh)"
 
 # Load Starship
 eval "$(starship init zsh)"
-export PATH="/data/data/com.termux/files/home/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/data/data/com.termux/files/home/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
